@@ -1,4 +1,12 @@
-@import "tailwindcss";
+@import "tailwindcss/preflight";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* optional: custom styles */
+body {
+  background-color: #1e293b; /* bg-slate-950 */
+  color: #f8fafc; /* text-slate-100 */
+}
 
 :root {
   --background: #ffffff;

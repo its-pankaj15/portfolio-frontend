@@ -1,65 +1,60 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="space-y-12">
+      {/* Hero */}
+      <section className="flex flex-col gap-6 md:flex-row md:items-center">
+        <div className="flex-1 space-y-4">
+          <p className="text-sm uppercase tracking-[0.2em] text-emerald-400">
+            Full-Stack Developer
+          </p>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Building performant backends and polished UIs.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+          <p className="text-slate-300 max-w-xl">
+            Backend-focused developer working with Node.js, Express, MongoDB, and modern
+            frontend tooling. This portfolio is powered by a custom CMS built from scratch.
+          </p>
+          <div className="flex gap-3">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="/projects"
+              className="px-4 py-2 rounded-md bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm font-medium"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              View Projects
+            </a>
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="/contact"
+              className="px-4 py-2 rounded-md border border-slate-700 hover:border-emerald-400 text-sm"
             >
-              Learning
-            </a>{" "}
-            center.
+              Contact
+            </a>
+          </div>
+        </div>
+        <div className="flex-1 flex justify-center md:justify-end">
+          <div className="h-40 w-40 md:h-48 md:w-48 rounded-full bg-gradient-to-br from-emerald-500/40 to-sky-500/40 border border-slate-700" />
+        </div>
+      </section>
+
+      {/* Highlighted sections */}
+      <section className="grid gap-6 md:grid-cols-3">
+        <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-4">
+          <h2 className="text-sm font-semibold mb-2">Backend</h2>
+          <p className="text-xs text-slate-300">
+            Node.js, Express, MongoDB, REST APIs, authentication, and custom CMS backends.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-4">
+          <h2 className="text-sm font-semibold mb-2">Frontend</h2>
+          <p className="text-xs text-slate-300">
+            React, Next.js, Tailwind CSS, and modern responsive UI patterns.
+          </p>
         </div>
-      </main>
+        <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-4">
+          <h2 className="text-sm font-semibold mb-2">Dev Experience</h2>
+          <p className="text-xs text-slate-300">
+            Clean APIs, clear architecture, and DX-focused tooling for smooth development.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
